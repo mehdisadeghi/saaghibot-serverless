@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "khayyamjs": "^1.0.3",
+    "telegraf": "^3.29.0"
+  }
+}
