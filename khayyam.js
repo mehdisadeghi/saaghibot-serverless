@@ -26,7 +26,7 @@ const data = require('khayyamjs');
         return bot;
     },
     process_query: process_query,
-    getRandomInt: getRandomInt,
+    findOne: findOne,
 };
 
 // Returns a random integer between min (included) and max (excluded)
@@ -34,6 +34,18 @@ const data = require('khayyamjs');
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
+// Shuffle and return one quatrain
+function findOne(text) {
+  let robayis = process_query(text);
+  if (robayis && robayis.length > 0) {
+    let index = getRandomInt(0, robayis.length);
+    return robayis[index].message_text;
+  }
+}
+
+
 
 // Convert an Arabic numeral into its hindu-arabic representation.
 function convertToHinduArabic(number) {
