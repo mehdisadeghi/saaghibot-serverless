@@ -3,11 +3,23 @@ const khayyam = require('./khayyam.js')
 const messages = require('./messages.js')
 
 
-module.exports.saaghia = async (event) => {
+exports.saaghia = (event, context, callback) => {
+  
+  console.log(JSON.stringify(event))
+
+  if (event.source == 'aws.events') {
+    console.log('I feel warm.')
+    callback(null, 'I feel warm.')
+  }
 
   if (!process.env.SAAGHIBOT_TOKEN) {
       console.error('SAAGHIBOT_TOKEN environment variable not defined.')
-      return {statusCode: 500}
+      callback(null, {
+        statusCode: 500,
+        body: JSON.stringify({
+          message: 'SAAGHIBOT_TOKEN environment variable not defined.',
+        })
+      })
   }
 
   const bot = new Telegraf(process.env.SAAGHIBOT_TOKEN)
@@ -25,13 +37,12 @@ module.exports.saaghia = async (event) => {
     ctx.answerInlineQuery(khayyam.process_query(ctx.inlineQuery.query).slice(0, 50))
   })
 
-  await bot.handleUpdate(JSON.parse(event.body))
+  bot.handleUpdate(JSON.parse(event.body))
 
-  return {
+  callback(null, {
     statusCode: 200,
     body: JSON.stringify({
       message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }, null, 2),
-  }
+    })
+  })
 }
