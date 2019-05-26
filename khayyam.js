@@ -96,7 +96,7 @@ function process_query(query) {
             //console.log('match is: ' + match);
             // If match is still true add the line to the results
             if (match) {
-                let title = 'رباعی شماره ' + convertToHinduArabic(k+1);
+                let title = 'رباعی شماره ' + convertToHinduArabic(parseInt(k)+1);
                 results.push(
                     {'type': 'article',
                     'id': (k+1).toString(),
