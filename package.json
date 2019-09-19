@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "khayyamjs": "1.0.3",
+    "khayyamjs": "1.0.4",
     "telegraf": "3.29.0"
   },
   "devDependencies": {
