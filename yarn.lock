@@ -455,10 +455,10 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-khayyamjs@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/khayyamjs/-/khayyamjs-1.0.3.tgz#2f50f429bf99161fe04def1a14bdd4d777c78cb5"
-  integrity sha1-L1D0Kb+ZFh/gTe8aFL3U13fHjLU=
+khayyamjs@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/khayyamjs/-/khayyamjs-1.0.4.tgz#f8eb6cb10d0b86edcc17b8bc22ac3ad9c6660e1b"
+  integrity sha512-T8XztFxSC0wL6+6r6+HuC5qZQQrj6bqMIxEIQQ0rKrvY+0hUvcdW2KSSfpNzWS2T3c7L4W6/nUa1z6aKipe/4A==
   dependencies:
     yamljs "^0.3.0"
 
