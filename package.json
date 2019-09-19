@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "khayyamjs": "^1.0.3",
-    "telegraf": "^3.29.0"
+    "khayyamjs": "1.0.3",
+    "telegraf": "3.29.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "5.16.0"
   }
 }
