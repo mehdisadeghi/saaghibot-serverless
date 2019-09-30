@@ -4,6 +4,6 @@
     "telegraf": "3.32.0"
   },
   "devDependencies": {
-    "eslint": "6.4.0"
+    "eslint": "6.5.0"
   }
 }
